@@ -59,6 +59,35 @@
 // }
 // console.log(random(numbers));
 
+// // 8 Create a function that takes two parameters: array and number off attempts. Based on number of attempts choose a random number from table that many times and return lowest one.
+let numbers = [1,6,23,8,4,8,3,7];
+let attempts = 5;
+function randomLowest(arr, att) {
+    let randomArr = [];
+    for (let i=0; i<att; i++){
+        let idx = Math.floor(Math.random()*arr.length);
+        randomArr.push(arr[idx]);
+    }
+    return Math.min(...randomArr);
+}
+console.log(randomLowest(numbers, attempts));
+
+// // 10 Create a function that on given array will perform operation of adding or subtracting elements. Operation is to be chosen at random. And return a result.[a,b,c,d] =>(((a+-b)+-c)+-d)
+// let numbers = [1,6,23,8,4,8,3,7];
+// function randomOps(arr) {
+//     let result = arr[0];
+//     for (let i=0; i<arr.length; i++) {
+//         let factor = Math.random();
+//         if (factor <= 0,5) {
+//             result = result + arr[i];
+//         }
+//         else {
+//             result = result - arr[i];
+//         }
+//     }
+//     return result;
+// }
+// console.log(randomOps(numbers));
 
 // // 11 Create a function that will return the current day name in Polish. 
 // let day = new Date()
@@ -75,3 +104,16 @@
 //     return count[0];
 // }
 // console.log(currentDay());
+
+// // 13 Create a function that take two numbers and return the object with 4 fields. Result on 4 basic arithmetic operations. 
+// let a = 1, b = 2;
+// function retObject(x,y) {
+//     let obj = {
+//         add: x + y,
+//         sub: x - y,
+//         mult: x * y,
+//         div: x / y,
+//     }
+//     return obj
+// }
+// console.log(retObject(a,b));
